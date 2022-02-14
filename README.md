@@ -5,6 +5,13 @@
 [![Apache License](https://img.shields.io/badge/LICENSE-Apache-ff69b4)](LICENSE)   ![u](https://img.shields.io/badge/USE-python-green)   [![s](https://img.shields.io/badge/Sponsor-Alipay-ff69b4)](https://azz.net/ly233)
 ![v](https://img.shields.io/badge/Version-220209-9cf)
 
+## 目录
+- 介绍
+- 开始
+- 实现逻辑
+- TODO
+- 鸣谢
+- 附录(效果附)
 
 ## 介绍
 
@@ -14,13 +21,13 @@
 
 
 
-## 特性
+### 特性
 
 模块化功能，大量使用类，实际最短实现代码不超过十行。
 
 
 
-## 注意
+### 注意
 ⚠ 自行反爬
 
 
@@ -41,11 +48,11 @@ pip install -r requirements.txt
 ── clouder.jpg
 ├── cloud.jpg
 ├── data  //数据
-│   ├── auto  //队列目录
-│   ├── comment  //评论
-│   ├── doData  //分析后总汇数据
-│   ├── poster   //分析
-│   ├── queue_rank.yaml   //队列索引
+│         ├── auto  //队列目录
+│         ├── comment  //评论
+│         ├── doData  //分析后总汇数据
+│         ├── poster   //分析
+│         ├── queue_rank.yaml   //队列索引
 │         └── run.yaml  //任务器设置！
 ├── Runtask.py  //任务器
 ├── Diana.py    //分析器
