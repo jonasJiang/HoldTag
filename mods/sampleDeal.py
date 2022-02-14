@@ -53,10 +53,10 @@ class cloud(object):
         con = cloud.jsonReader(file_dir)
         lists = list(con['reply_content'])
         for item in lists:
-            if (SnowNLP(item).sentiments)>0.5:
+            if SnowNLP(item).sentiments > 0.5:
+                print(item)
 
-
-
+                # t-o-d-o--
 
     @staticmethod
     def drawCloud(file_dir, ids):
@@ -94,8 +94,8 @@ class cloud(object):
             random_state=30,
         )
         wc.generate_from_frequencies(result)  # 制作词云
-        wc.to_file(useTool().filesafer('data/poster/'+ids+'/clouder.jpg'))  # 保存到当地文件
-        return useTool().filesafer('data/poster/'+ids+'/clouder.jpg')
+        wc.to_file(useTool().filesafer('data/poster/' + ids + '/clouder.jpg'))  # 保存到当地文件
+        return useTool().filesafer('data/poster/' + ids + '/clouder.jpg')
 
     @staticmethod
     def mdPoster(file_dir, ids, tar):
