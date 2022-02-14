@@ -1,0 +1,121 @@
+{
+  "main": {
+    "id": "5df4f963dcf207e0",
+    "type": "split",
+    "children": [
+      {
+        "id": "24fa9d2a21cde18c",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "note/soda.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "521c31a692313863",
+    "type": "split",
+    "children": [
+      {
+        "id": "96e9c0f4a100a070",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "42bdc4bb926f4f57",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "b021f07fbc1f265a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 202
+  },
+  "right": {
+    "id": "d763ff45a3a27c90",
+    "type": "split",
+    "children": [
+      {
+        "id": "996cc4e5e52aa69e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b3c3bc59aa573cb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "note/soda.md"
+              }
+            }
+          },
+          {
+            "id": "b2c6c9fdd416ed44",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "note/soda.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c4f408196415d4e3",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 100
+  },
+  "active": "24fa9d2a21cde18c",
+  "lastOpenFiles": [
+    "note/soda.md",
+    "未命名.md",
+    "日记/2022-01-25.md",
+    "日记/2022-01-24.md",
+    "日记/2022-01-23.md",
+    "日记/2022-01-22.md",
+    "日记/2022-01-21.md",
+    "Day Planners/Day Planner-20220121.md",
+    "日记/2022-01-20.md",
+    "笔记/学习体系/笔记.md"
+  ]
+}
