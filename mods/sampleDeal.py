@@ -55,9 +55,9 @@ class cloud(object):
         for item in lists:
             point = SnowNLP(item).sentiments
             if point > 0.5:
-                print(item + ' --GOOD-- ' + point)
+                print(item + ' --GOOD-- ' + str(point))
             else:
-                print(item + ' --BAD-- ' + point)
+                print(item + ' --BAD-- ' + str(point))
 
                 # t-o-d-o--
 

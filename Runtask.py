@@ -29,6 +29,7 @@ from mods.tasker import tasker
 logging.config.fileConfig("logger.conf")
 logger = logging.getLogger('justConsole')
 # tasker().clearTask()
+
 dat = useTool().rData("data/run.yaml")
 for k, item in (dat.items()):
     # dat['runset']['key'] =  # 过滤词汇
