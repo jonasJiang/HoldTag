@@ -13,15 +13,7 @@ __version__ = '2月112114'
  / /_/ / / /_/ / / / / /_/ / 
 /_____/_/\__,_/_/ /_/\__,_/                    
 """
-# 模型
-# 消极 BV1tB4y1c7F7
-'''积极
-BV1SF411z7HT
-BV1kq4y1u7h7
-BV1C3411b7Gg
-BV1ca411k77e
-BV1BZ4y1d7NY
-'''
+
 
 import logging.config
 logging.config.fileConfig("logger.conf")
@@ -35,6 +27,9 @@ from mods.sampleDeal import cloud
 
 
 
+'''
+任务实例
+'''
 # Star = useTool().rData("data/queue_rank.yaml")
 # if Star:
 #     for k, item in (Star.items()):
@@ -51,12 +46,24 @@ from mods.sampleDeal import cloud
 
 
 
+'''
+分析
+'''
+# id = "k"
+# list=['引用1','引用2','引用3']
+# fileDir = cloud.mdPoster("data/comment/202202122318/636443862-4.json", id,list)
+# logging.debug(fileDir)
 
+'''
+词云
+'''
 # id = "k"
 # fileDir = cloud.drawCloud("data/comment/202202122318/636443862-4.json", id)
 # logging.debug(fileDir)
 
-
+'''
+情感分析
+'''
 id = "k"
 fileDir = cloud.moodFind("data/comment/202202122318/636443862-4.json", id)
 logging.debug(fileDir)
@@ -69,7 +76,9 @@ logging.debug(fileDir)
 # f.write(str.join(lists))
 # f.close()
 
-
+'''
+任务取消操作
+'''
 # 筛选后的结果
 # tasker().clearTask(folder='doData')
 # tasker().clearTask()

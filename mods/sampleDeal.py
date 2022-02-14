@@ -53,8 +53,11 @@ class cloud(object):
         con = cloud.jsonReader(file_dir)
         lists = list(con['reply_content'])
         for item in lists:
-            if SnowNLP(item).sentiments > 0.5:
-                print(item)
+            point = SnowNLP(item).sentiments
+            if point > 0.5:
+                print(item + ' --GOOD-- ' + point)
+            else:
+                print(item + ' --BAD-- ' + point)
 
                 # t-o-d-o--
 
