@@ -1,6 +1,6 @@
 ## HoldTag
 
-![counter](https://count.getloli.com/get/45ironholdtag?theme=moebooru)
+![counter](https://count.getloli.com/get/@45iron-gitlab-autotag?theme=moebooru)
 
 [![Apache License](https://img.shields.io/badge/LICENSE-Apache-ff69b4)](LICENSE)   ![u](https://img.shields.io/badge/USE-python-green)   [![s](https://img.shields.io/badge/Sponsor-Alipay-ff69b4)](https://azz.net/ly233)
 ![v](https://img.shields.io/badge/Version-220209-9cf)
