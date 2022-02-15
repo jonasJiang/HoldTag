@@ -14,8 +14,8 @@ __version__ = '2月112114'
 /_____/_/\__,_/_/ /_/\__,_/                    
 """
 
-
 import logging.config
+
 logging.config.fileConfig("logger.conf")
 logger = logging.getLogger('justConsole')
 
@@ -25,7 +25,7 @@ from Hunter02 import dog
 from mods.deal import second
 from mods.sampleDeal import cloud
 
-
+print("第一次使用分析器请修改此文件逻辑：Diana.py")
 
 '''
 任务实例
@@ -45,7 +45,6 @@ from mods.sampleDeal import cloud
 #             logging.info("不通过")
 
 
-
 '''
 分析
 '''
@@ -62,11 +61,11 @@ from mods.sampleDeal import cloud
 # logging.debug(fileDir)
 
 '''
-情感分析
+情感分析(未完善)
 '''
-id = "k"
-fileDir = cloud.moodFind("data/comment/202202122318/636443862-4.json", id)
-logging.debug(fileDir)
+# id = "k"
+# fileDir = cloud.moodFind("data/comment/202202122318/636443862-4.json", id)
+# logging.debug(fileDir)
 
 
 # js = cloud.jsonReader("data/comment/asoul/asoul-4.json")

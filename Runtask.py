@@ -14,11 +14,7 @@ __version__ = '2月112145'
 /_____/_/\__,_/_/ /_/\__,_/                    
 """
 
-
-
-
-
-
+print("第一次使用猎人请请修改此文件：data/run.yaml来指定队列，然后取消注释：Runtask.py：line 36-45")
 
 import logging.config
 
@@ -30,6 +26,8 @@ logging.config.fileConfig("logger.conf")
 logger = logging.getLogger('justConsole')
 # tasker().clearTask()
 
+
+'''
 dat = useTool().rData("data/run.yaml")
 for k, item in (dat.items()):
     # dat['runset']['key'] =  # 过滤词汇
@@ -39,5 +37,10 @@ for k, item in (dat.items()):
     # result 数据和两个关键词
     if result:
        tasker().doData(result)
+'''
+
+'''
+tasker api
+'''
 # 筛选后的结果
-#tasker().clearTask(folder='doData')
+# tasker().clearTask(folder='doData')
