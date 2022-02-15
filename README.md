@@ -212,6 +212,12 @@ THIS link: https://azz.net/ly233
 
 ------------------------------
 ## 附录
+
+### 报告示例
+
+请查看仓库内 sample/resultsample/ 文件夹
+
+
 ### 识别效果
 
 ```markdown

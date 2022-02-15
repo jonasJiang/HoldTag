@@ -45,6 +45,7 @@ print("第一次使用分析器请修改此文件逻辑：Diana.py")
 #             print("完成")
 #             fileDir = cloud.mdPoster(path, k , idlist)
 #             # result_md = second(useTool().filesafer(path), idlist)
+#             cloud.mdPdf(fileDir,fileDir+'.pdf')
 #             tasker().cancelTask(k) # 取消任务
 #         else:
 #             logging.info("不通过")
