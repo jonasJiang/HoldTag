@@ -51,12 +51,12 @@ def random_sleep(mu=4, sigma=1.1):
 
 
 class dog(object):
-    def __init__(self,UA):
+    def __init__(self, UA):
         self.fail = False
         self.END = False
         logging.debug(UA)
         if not UA:
-           UA='Mozilla/5.0 (X11; Linux x86_64; rv:96.0) Gecko/20100101 Firefox/96.0'
+            UA = 'Mozilla/5.0 (X11; Linux x86_64; rv:96.0) Gecko/20100101 Firefox/96.0'
         '''
         '''
         self.header = {
@@ -69,7 +69,7 @@ class dog(object):
             'Connection': 'keep-alive',
             'Host': 'api.bilibili.com',
             'Upgrade-Insecure-Requests': '1',
-            'User-Agent': UA, # 'Mozilla/5.0 (X11; Linux x86_64; rv:96.0) Gecko/20100101 Firefox/96.0',
+            'User-Agent': UA,  # 'Mozilla/5.0 (X11; Linux x86_64; rv:96.0) Gecko/20100101 Firefox/96.0',
             'Cookie': '1P_JAR=2022-02-09-02;SEARCH_SAMESITE=CgQIv5QB;ID=CgQIsv5QB0',
         }
 
@@ -105,7 +105,7 @@ class dog(object):
             logging.debug("合并...extend list")
             newer = [item for item in clist if item not in listed]
             # 在clist而不是listed
-            listed = listed+newer
+            listed = listed + newer
         else:
             listed = clist
         with open(save_path, "w", encoding='utf-8') as f:
