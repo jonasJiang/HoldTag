@@ -81,15 +81,13 @@ class dog(object):
 
     def get_stored_name(self, fileD):
         """
-        获取 json 文件中的对象
+        获取文件中的json
         """
         try:
             with open(fileD, "r") as file_obj:
-                if file_obj:
-                    name_lt = json.load(file_obj)
-                else:
-                    name_lt = None
-        except FileNotFoundError:
+                name_lt = json.load(file_obj)
+        except json.decoder.JSONDecodeError:
+            logging.debug("NONONONO")
             name_lt = None
         # file_obj.close()
         return name_lt
@@ -97,10 +95,10 @@ class dog(object):
     def back_run(self, clist, b_oid, IDS):
         save_path = useTool().filesafer('data/comment/' + str(IDS) + '/' + IDS + '-4.json')  # 每中断一次更新一次
         listd = self.get_stored_name(save_path)
-        if listd:
-            # 追加写入
-            clist = clist + listd
-        with open(save_path, "a", encoding='utf-8') as f:
+        if listd:  # 追加写入
+            logging.debug("合并...extend list")
+            clist.extend(listd)
+        with open(save_path, "w", encoding='utf-8') as f:
             json.dump(clist, f, ensure_ascii=False, indent=4, separators=(',', ':'))
 
     def ok(self, comment_url):
@@ -155,7 +153,7 @@ class dog(object):
                     if replies is not None:
                         for reply in replies:
                             n = n + 1
-                            logging.debug('处理数' + add_num() + ' -拉取第' + str(n) + '条评论....')
+                            print('处理数' + add_num() + ' -拉取第' + str(n) + '条评论....')
 
                             reply_info = {
                                 'reply_id': reply['member']['mid'],  # 评论者id,
