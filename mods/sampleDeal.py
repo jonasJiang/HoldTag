@@ -31,6 +31,29 @@ class cloud(object):
         pass
 
     @staticmethod
+    def convert_html_to_pdf(source_html, output_filename):
+        from xhtml2pdf.default import DEFAULT_FONT
+        from reportlab.pdfbase.ttfonts import TTFont
+        from reportlab.pdfbase import pdfmetrics
+        from xhtml2pdf import pisa
+        # open output file for writing (truncated binary)
+        result_file = open(output_filename, "w+b")
+
+        pdfmetrics.registerFont(TTFont('yh', 'SimHei.ttf'))
+        DEFAULT_FONT['helvetica'] = 'yh'
+        # convert HTML to PDF
+
+        pisa_status = pisa.CreatePDF(
+            source_html,  # the HTML to convert
+            dest=result_file)  # file handle to recieve result
+
+        # close output file
+        result_file.close()  # close output file
+
+        # return False on success and True on errors
+        return pisa_status.err
+
+    @staticmethod
     def jsonReader(file_dir):
         all_data_frame = None
         print("开始分析...." + file_dir)
@@ -99,6 +122,16 @@ class cloud(object):
         wc.generate_from_frequencies(result)  # 制作词云
         wc.to_file(useTool().filesafer('data/poster/' + ids + '/clouder.jpg'))  # 保存到当地文件
         return useTool().filesafer('data/poster/' + ids + '/clouder.jpg')
+
+    @staticmethod
+    def mdPdf(input_filename,output_filename):
+        from xhtml2pdf import pisa
+        from markdown import markdown
+        with open(input_filename, encoding='utf-8') as f:
+            text = f.read()
+        source_html = markdown(text, output_format='html')  # MarkDown转HTML
+        pisa.showLogging()
+        cloud.convert_html_to_pdf(source_html, output_filename)
 
     @staticmethod
     def mdPoster(file_dir, ids, tar):
@@ -209,3 +242,50 @@ class cloud(object):
                 f.write(("> - %s - %s" % (i + 1, tar[i])) + '\n\n')
             print("分析完毕....")
         return path
+
+
+'''pdf
+#!pip install xhtml2pdf
+from xhtml2pdf import pisa             # import python module
+#!pip install markdown
+from markdown import markdown
+
+input_filename = '/content/data/poster/V圈队列/【2022-2-15节奏分析】.md'
+
+with open(input_filename, encoding='utf-8') as f:
+    text = f.read()
+
+source_html = markdown(text, output_format='html')  # MarkDown转HTML
+# print(source_html)
+# Define your data
+# source_html = "<html><body><p>To PDF or not to PDF</p></body></html>"
+output_filename = "stests.pdf"
+
+# Utility function
+def convert_html_to_pdf(source_html, output_filename):
+    # open output file for writing (truncated binary)
+    result_file = open(output_filename, "w+b")
+    from xhtml2pdf.default import DEFAULT_FONT
+    from reportlab.pdfbase.ttfonts import TTFont
+    from reportlab.pdfbase import pdfmetrics
+    pdfmetrics.registerFont(TTFont('yh', 'SimHei.ttf'))
+    DEFAULT_FONT['helvetica'] = 'yh'
+    # convert HTML to PDF
+    
+    pisa_status = pisa.CreatePDF(
+            source_html,                # the HTML to convert
+            dest=result_file)           # file handle to recieve result
+
+    # close output file
+    result_file.close()                 # close output file
+
+    # return False on success and True on errors
+    return pisa_status.err
+
+# Main program
+if __name__ == "__main__":
+    pisa.showLogging()
+    convert_html_to_pdf(source_html, output_filename)
+'''
+
+
