@@ -184,7 +184,7 @@ THIS link: https://azz.net/ly233
 [![s](https://img.shields.io/badge/Sponsor-Alipay-ff69b4)](https://afdian.net/@dosometh)
 
 
-[![](sample/logo.png)](https://gitlab.com/45iron/holdtag)
+[![](https://s3.bmp.ovh/imgs/2022/02/e30c46c830b0964d.png)](https://gitlab.com/45iron/holdtag)
 
 
 
