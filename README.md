@@ -127,6 +127,23 @@ pip install -r requirements.txt
 ```
 设定完毕后运行器材即可，数据模块与分析模块是分割的，独立运行。
 
+#### Colab运行
+```commandline
+!git clone https://gitlab.com/45iron/holdtag.git
+!rsync -r /content/holdtag/* /content/
+!python -m pip install --upgrade pip
+!pip install -r requirements.txt
+
+# 去修改文件
+
+#可选
+!pip install fake_useragent
+
+!python /content/Runtask.py
+!python /content/Diana.py
+
+```
+
 
 **关于情感模型训练**
 情感模型训练为Snownlp自带的功能，语料库放在了sample文件夹。

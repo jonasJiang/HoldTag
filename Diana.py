@@ -36,7 +36,11 @@ print("第一次使用分析器请修改此文件逻辑：Diana.py")
 #         road = str(item)
 #         logging.info("启动任务 " + k + " --" + road)
 #         info = {"path": road}
-#         path, idlist, iserror = dog().run(k, **info)
+#          print("需要使用# fake_useragent库的话请手动装，否则请注释这里")
+#         from fake_useragent import UserAgent
+#         ua = UserAgent()
+#         UA = ua.firefox
+#         path, idlist, iserror = dog(UA).run(k, **info)
 #         if path:
 #             print("完成")
 #             fileDir = cloud.mdPoster(path, k , idlist)

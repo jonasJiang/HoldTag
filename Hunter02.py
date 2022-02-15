@@ -27,6 +27,7 @@ import random
 import requests
 import math
 import json
+from tqdm import tqdm
 
 num = 0
 
@@ -50,9 +51,14 @@ def random_sleep(mu=4, sigma=1.1):
 
 
 class dog(object):
-    def __init__(self):
+    def __init__(self,UA):
         self.fail = False
         self.END = False
+        logging.debug(UA)
+        if not UA:
+           UA='Mozilla/5.0 (X11; Linux x86_64; rv:96.0) Gecko/20100101 Firefox/96.0'
+        '''
+        '''
         self.header = {
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
             'Accept-Encoding': 'gzip, deflate',
@@ -63,7 +69,7 @@ class dog(object):
             'Connection': 'keep-alive',
             'Host': 'api.bilibili.com',
             'Upgrade-Insecure-Requests': '1',
-            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:96.0) Gecko/20100101 Firefox/96.0',
+            'User-Agent': UA, # 'Mozilla/5.0 (X11; Linux x86_64; rv:96.0) Gecko/20100101 Firefox/96.0',
             'Cookie': '1P_JAR=2022-02-09-02;SEARCH_SAMESITE=CgQIv5QB;ID=CgQIsv5QB0',
         }
 
@@ -97,7 +103,9 @@ class dog(object):
         listed = self.get_stored_name(save_path)
         if listed:  # 追加写入
             logging.debug("合并...extend list")
-            clist = list(set(clist + listed))
+            newer = [item for item in listed if item not in clist]
+            # 在clist而不是listed
+            clist = clist.extend(newer)
         with open(save_path, "w", encoding='utf-8') as f:
             json.dump(clist, f, ensure_ascii=False, indent=4, separators=(',', ':'))
 
@@ -151,9 +159,9 @@ class dog(object):
                 if 'data' in response.json().keys():
                     replies = response.json()['data']['replies']
                     if replies is not None:
-                        for reply in replies:
+                        for reply in tqdm(replies):
                             n = n + 1
-                            print('处理数' + add_num() + ' -拉取第' + str(n) + '条评论....')
+                            # print('处理数' + add_num() + ' -拉取第' + str(n) + '条评论....')
 
                             reply_info = {
                                 'reply_id': reply['member']['mid'],  # 评论者id,
@@ -188,7 +196,7 @@ class dog(object):
         comment_list = []
         for reply_pn in range(1, page_rcount + 1):
             m = m + 1
-            print('处理数' + add_num() + ' -拉取第 ' + str(n) + ' 条评论中的第' + str(m) + '条子评论..')
+            # print('处理数' + add_num() + ' -拉取第 ' + str(n) + ' 条评论中的第' + str(m) + '条子评论..')
             # time.sleep(1.1)
             reply_url = 'https://api.bilibili.com/x/v2/reply/reply?&pn=%s&type=%s&oid=%s&ps=10&root=%s' % (
                 reply_pn, Gtype, Goid, root)

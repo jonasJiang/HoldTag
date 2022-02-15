@@ -13,3 +13,4 @@ snownlp~=0.12.3
 matplotlib
 markdown
 xhtml2pdf
+tqdm
