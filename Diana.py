@@ -39,8 +39,9 @@ print("第一次使用分析器请修改此文件逻辑：Diana.py")
 #         path, idlist, iserror = dog().run(k, **info)
 #         if path:
 #             print("完成")
+#             fileDir = cloud.mdPoster(path, k , idlist)
 #             # result_md = second(useTool().filesafer(path), idlist)
-#             # tasker().cancelTask(k) # 取消任务
+#             tasker().cancelTask(k) # 取消任务
 #         else:
 #             logging.info("不通过")
 
