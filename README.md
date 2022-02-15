@@ -5,6 +5,9 @@
 [![Apache License](https://img.shields.io/badge/LICENSE-Apache-ff69b4)](LICENSE)   ![u](https://img.shields.io/badge/USE-python-green)   [![s](https://img.shields.io/badge/Sponsor-Alipay-ff69b4)](https://azz.net/ly233)
 ![v](https://img.shields.io/badge/Version-220209-9cf)
 
+
+>About English Readme: This project lacks English documentation, contributions are welcome
+
 ## 目录
 - 介绍
 - 开始
@@ -15,11 +18,13 @@
 
 ## 介绍
 
-多队列监控BiliBili的关键词结果，注册队列，唤醒爬取分析模块生成词云，情感判断，节奏分析报告。
+注册多关键词监控组，多队列监控BiliBili的关键词搜索结果。
 
-支持多视频合并分析，多关键词规则监控。
+自动注册队列，唤醒爬取分析模块生成词云，情感判断，节奏分析报告。
 
-使用自训练情感模型，为V圈打造。
+多视频合并分析，快速分析节奏所在。
+
+使用自训练情感模型，主要分析虚拟主播受众。
 
 
 
@@ -30,7 +35,12 @@
 
 
 ### 注意
-⚠ 自行反爬
+
+⚠ 爬取时请考虑Robot协议
+
+⚠ 本项目仅仅用于提供舆情解决方案，不提供实际产品;如果违规项目使用本项目源代码，本项目不负责任。
+
+⚠ 本项目样例数据为测试生成且仅供测试，仓库不提供服务。
 
 
 ## 开始
@@ -99,7 +109,8 @@ pip install -r requirements.txt
 ```
 
 
-#### 使用
+
+### 使用
 
 填写并编写如下，目前仍在开发.....暂无提供成品部署
 ```
@@ -108,6 +119,20 @@ pip install -r requirements.txt
 ├── Runtask.py  //任务器
 ├── Diana.py    //分析器
 ```
+设定完毕后运行器材即可，数据模块与分析模块是分割的，独立运行。
+
+
+**关于情感模型训练**
+情感模型训练为Snownlp自带的功能，语料库放在了sample文件夹。
+
+负面语料取样来源为
+- v吧(百度贴吧)
+- 桐生会(BiliBili)
+
+正面语料取样来源为
+- Asoul二创
+- Asoul混剪
+
 
 
 
