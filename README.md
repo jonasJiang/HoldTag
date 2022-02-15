@@ -4,7 +4,8 @@
 
 
 [![Apache License](https://img.shields.io/badge/LICENSE-Apache-ff69b4)](LICENSE)   ![u](https://img.shields.io/badge/USE-python-green)   [![s](https://img.shields.io/badge/Sponsor-Alipay-ff69b4)](https://afdian.net/@dosometh)
-![v](https://img.shields.io/badge/Version-220209-9cf)
+
+![v](https://img.shields.io/badge/Version-220215-9cf)
 
 
 
@@ -31,7 +32,7 @@
 
 使用自训练情感模型，主要分析虚拟主播受众。
 
-
+>项目仍在开发，出现问题请提交issue
 
 ### 特性
 

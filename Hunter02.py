@@ -94,10 +94,10 @@ class dog(object):
 
     def back_run(self, clist, b_oid, IDS):
         save_path = useTool().filesafer('data/comment/' + str(IDS) + '/' + IDS + '-4.json')  # 每中断一次更新一次
-        listd = self.get_stored_name(save_path)
-        if listd:  # 追加写入
+        listed = self.get_stored_name(save_path)
+        if listed:  # 追加写入
             logging.debug("合并...extend list")
-            clist.extend(listd)
+            clist = list(set(clist + listed))
         with open(save_path, "w", encoding='utf-8') as f:
             json.dump(clist, f, ensure_ascii=False, indent=4, separators=(',', ':'))
 
