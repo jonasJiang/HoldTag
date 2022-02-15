@@ -94,7 +94,7 @@ class dog(object):
                 name_lt = json.load(file_obj)
         except json.decoder.JSONDecodeError:
             logging.debug("NONONONO")
-            name_lt = None
+            name_lt = []
         # file_obj.close()
         return name_lt
 
@@ -105,7 +105,7 @@ class dog(object):
             logging.debug("合并...extend list")
             newer = [item for item in clist if item not in listed]
             # 在clist而不是listed
-            listed = listed.extend(newer)
+            listed = listed+newer
         else:
             listed = clist
         with open(save_path, "w", encoding='utf-8') as f:

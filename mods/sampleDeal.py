@@ -105,7 +105,7 @@ class cloud(object):
             line = line.strip('\n')
             STOPWORDS.add(line)
         font = r'SimHei.ttf'
-        image = Image.open('cloud.jpg')
+        image = Image.open('cloud.png')
         mask = np.array(image)
         wc = WordCloud(
             font_path=font,  # 使用的字体库
