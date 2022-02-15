@@ -106,6 +106,8 @@ class dog(object):
             newer = [item for item in clist if item not in listed]
             # 在clist而不是listed
             listed = listed.extend(newer)
+        else:
+            listed = clist
         with open(save_path, "w", encoding='utf-8') as f:
             json.dump(listed, f, ensure_ascii=False, indent=4, separators=(',', ':'))
 
