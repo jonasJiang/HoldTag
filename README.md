@@ -2,7 +2,7 @@
 
 ![counter](https://count.getloli.com/get/@45iron-gitlab-autotag?theme=moebooru)
 
-[![Apache License](https://img.shields.io/badge/LICENSE-Apache-ff69b4)](LICENSE)   ![u](https://img.shields.io/badge/USE-python-green)   [![s](https://img.shields.io/badge/Sponsor-Alipay-ff69b4)](https://azz.net/ly233)
+[![Apache License](https://img.shields.io/badge/LICENSE-Apache-ff69b4)](LICENSE)   ![u](https://img.shields.io/badge/USE-python-green)   [![s](https://img.shields.io/badge/Sponsor-Alipay-ff69b4)](https://afdian.net/@dosometh)
 ![v](https://img.shields.io/badge/Version-220209-9cf)
 
 
@@ -181,10 +181,10 @@ pip install -r requirements.txt
 
 THIS link: https://azz.net/ly233
 
-[![s](https://img.shields.io/badge/Sponsor-Alipay-ff69b4)](https://azz.net/ly233)
+[![s](https://img.shields.io/badge/Sponsor-Alipay-ff69b4)](https://afdian.net/@dosometh)
 
 
-[![](https://s3.bmp.ovh/imgs/2022/02/f30ca9d9152ba7aa.png)](https://gitlab.com/45iron/holdtag)
+[![](sample/logo.png)](https://gitlab.com/45iron/holdtag)
 
 
 
