@@ -50,7 +50,6 @@ def random_sleep(mu=4, sigma=1.1):
         secs = mu  # 太小则重置为平均值
     time.sleep(secs)
 
-
 class dog(object):
     def __init__(self, UA):
         self.fail = False
