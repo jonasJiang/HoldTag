@@ -103,11 +103,11 @@ class dog(object):
         listed = self.get_stored_name(save_path)
         if listed:  # 追加写入
             logging.debug("合并...extend list")
-            newer = [item for item in listed if item not in clist]
+            newer = [item for item in clist if item not in listed]
             # 在clist而不是listed
-            clist = clist.extend(newer)
+            listed = listed.extend(newer)
         with open(save_path, "w", encoding='utf-8') as f:
-            json.dump(clist, f, ensure_ascii=False, indent=4, separators=(',', ':'))
+            json.dump(listed, f, ensure_ascii=False, indent=4, separators=(',', ':'))
 
     def ok(self, comment_url):
         random_sleep(4)
