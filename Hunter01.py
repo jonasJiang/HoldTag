@@ -83,8 +83,10 @@ class checker(object):
         keywords = run_set.get("key")
         run_id = run_set.get("id")
         result = {}
-        # 页数
-        for i in range(1, 2):
+        '''
+        页数设置
+        '''
+        for i in range(1, 15):
             datas['page'] = i
             logging.info("working... --" + str(i))
             random_sleep(7)
