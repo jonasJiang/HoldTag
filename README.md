@@ -1,6 +1,6 @@
 ## HoldTag
 
-[![](https://s3.bmp.ovh/imgs/2022/02/e30c46c830b0964d.png)](https://gitlab.com/45iron/holdtag)
+[![](https://gitlab.com/45iron/holdtag/-/raw/main/cover.png)](https://gitlab.com/45iron/holdtag)
 
 
 [![Apache License](https://img.shields.io/badge/LICENSE-Apache-ff69b4)](LICENSE)   ![u](https://img.shields.io/badge/USE-python-green)   [![s](https://img.shields.io/badge/Sponsor-Alipay-ff69b4)](https://afdian.net/@dosometh)
