@@ -12,6 +12,7 @@
 
 >About English Readme: This project lacks English documentation, contributions are welcome
 
+>Q: why not use 爬虫框架? A:写完了才想到
 
 ## 目录
 
