@@ -57,17 +57,17 @@ class checker(object):
         response = requests.get(url=urls, params=dat, headers=self.header)
         if response.status_code == 200:
             content = response.text
-            json_dict = json.loads(content)
+            json_dicts = json.loads(content)
             # logger.debug(json_dict)
-            if json_dict['message'] == "0":
-                if json_dict['data'].get("result"):
-                    return json_dict['data'].get("result")
+            if json_dicts.get('message') == "0":
+                if json_dicts.get('data').get("result"):
+                    return json_dicts.get('data').get("result")
                 else:
-                    logger.info("NO data" + str(json_dict))
+                    logger.info("NO data" + str(json_dicts))
                     self.END = True
                     return False
             else:
-                logger.debug("NO Data Code" + str(json_dict))
+                logger.debug("NO Data Code" + str(json_dicts))
                 return False
         else:
             logger.debug("NET CODE  " + str(response.status_code))
@@ -91,8 +91,9 @@ class checker(object):
             logging.info("working... --" + str(i))
             random_sleep(7)
             res = self.getThing(URL, datas)
-
             # 筛查
+            if not res:
+                print('fail to get page')
             for index, item in enumerate(res):
                 video_object = {}
                 title = item.get("title")

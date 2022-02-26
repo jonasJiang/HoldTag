@@ -32,7 +32,6 @@ from tqdm import tqdm
 num = 0
 
 
-
 def add_num():
     global num
     num += 1
@@ -49,6 +48,7 @@ def random_sleep(mu=4, sigma=1.1):
     if secs <= 0:
         secs = mu  # 太小则重置为平均值
     time.sleep(secs)
+
 
 class dog(object):
     def __init__(self, UA):

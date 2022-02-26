@@ -19,6 +19,7 @@ from mods.Tool import useTool
 logging.config.fileConfig("logger.conf")
 logger = logging.getLogger('justConsole')
 
+
 class tasker(object):
     def __init__(self):
         self.debug = True
@@ -28,7 +29,7 @@ class tasker(object):
             files = []
         import os
         file_list = os.listdir(
-            os.path.abspath(os.path.dirname(useTool().filesafer('data/'+ folder +'/init.yaml'))))  # 获取当前文件夹内所有文件名
+            os.path.abspath(os.path.dirname(useTool().filesafer('data/' + folder + '/init.yaml'))))  # 获取当前文件夹内所有文件名
         for file in file_list[::-1]:  # 逆序遍历
             if file.endswith('.yaml'):  # 判断文件的扩展名
                 pass
@@ -37,17 +38,17 @@ class tasker(object):
         logging.debug(file_list)
         try:
             for i, k in enumerate(file_list):
-                ok = useTool().filesafer('data/'+folder+'/' + k)
+                ok = useTool().filesafer('data/' + folder + '/' + k)
                 files.append(ok)
                 os.remove(ok)
-            if folder=="auto/queue":
-               os.remove(useTool().filesafer("data/queue_rank.yaml"))
+            if folder == "auto/queue":
+                os.remove(useTool().filesafer("data/queue_rank.yaml"))
         except Exception as err:
             logging.error(err)
         else:
             pass
 
-    def raiseTask(self, deal,key):
+    def raiseTask(self, deal, key):
         import time
         date = str(time.strftime("%Y%m%d%H%M", time.localtime()))
         date = key
@@ -92,7 +93,7 @@ class tasker(object):
             useTool().sData("data/doData/" + dat.get('key') + ".yaml", total)
             # logging.debug(deal)
             # 注册任务
-            keys = self.raiseTask(deal,dat.get('key'))
+            keys = self.raiseTask(deal, dat.get('key'))
             return keys
         else:
             logger.info("NEED DICT")
