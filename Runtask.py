@@ -27,7 +27,7 @@ logger = logging.getLogger('justConsole')
 # tasker().clearTask()
 
 
-
+'''
 dat = useTool().rData("data/run.yaml")
 for k, item in (dat.items()):
     # dat['runset']['key'] =  # 过滤词汇
@@ -37,7 +37,7 @@ for k, item in (dat.items()):
     # result 数据和两个关键词
     if result:
        tasker().doData(result)
-
+'''
 
 '''
 tasker api
